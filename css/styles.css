@@ -421,6 +421,7 @@ p + p { margin-top: 1em; }
   color: var(--white);
   margin-bottom: 1.5rem;
   max-width: 14ch;
+  letter-spacing: -0.01em;
 }
 .hero__title em {
   font-style: normal;
