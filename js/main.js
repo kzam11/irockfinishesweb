@@ -69,6 +69,92 @@ if ('IntersectionObserver' in window) {
   });
 }
 
+// Reviews carousel
+(function () {
+  const track = document.getElementById('reviewsTrack');
+  const prevBtn = document.getElementById('reviewsPrev');
+  const nextBtn = document.getElementById('reviewsNext');
+  const dotsContainer = document.getElementById('reviewsDots');
+  if (!track) return;
+
+  const cards = Array.from(track.children);
+  let perPage = 3;
+  let current = 0;
+  let autoTimer;
+
+  function getPerPage() {
+    if (window.innerWidth <= 560) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function totalPages() {
+    return Math.ceil(cards.length / perPage);
+  }
+
+  function goTo(page) {
+    const pages = totalPages();
+    current = (page + pages) % pages;
+    const offset = current * perPage * (100 / cards.length);
+    track.style.transform = `translateX(-${offset}%)`;
+    dotsContainer.querySelectorAll('.reviews-carousel__dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalPages(); i++) {
+      const dot = document.createElement('button');
+      dot.className = 'reviews-carousel__dot' + (i === current ? ' active' : '');
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Page ${i + 1}`);
+      dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  function init() {
+    perPage = getPerPage();
+    // Set track width so flex items size correctly
+    track.style.width = `${(cards.length / perPage) * 100}%`;
+    cards.forEach(c => {
+      c.style.flex = `0 0 ${100 / cards.length}%`;
+    });
+    current = 0;
+    buildDots();
+    goTo(0);
+    resetAuto();
+  }
+
+  prevBtn?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  nextBtn?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+  // Pause on hover
+  track.closest('.reviews-carousel')?.addEventListener('mouseenter', () => clearInterval(autoTimer));
+  track.closest('.reviews-carousel')?.addEventListener('mouseleave', resetAuto);
+
+  // Swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); resetAuto(); }
+  });
+
+  window.addEventListener('resize', () => {
+    const newPer = getPerPage();
+    if (newPer !== perPage) init();
+  });
+
+  init();
+})();
+
 // Contact form (prevent default, show success)
 const form = document.querySelector('.js-contact-form');
 if (form) {
