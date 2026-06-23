@@ -10,15 +10,15 @@
   --dark:        #141414;
   --dark-2:      #1E1E1E;
   --dark-3:      #2A2A2A;
-  --gold:        #C9A870;
-  --gold-light:  #E2C99A;
-  --gold-dark:   #A88548;
-  --stone:       #F7F4EF;
-  --stone-2:     #EDE9E2;
-  --stone-3:     #D9D3C8;
+  --gold:        #E31E24;
+  --gold-light:  #FF5358;
+  --gold-dark:   #B31519;
+  --stone:       #F8F5F5;
+  --stone-2:     #EDE8E8;
+  --stone-3:     #D9D0D0;
   --white:       #FFFFFF;
-  --text-light:  #B0A898;
-  --text-muted:  #888078;
+  --text-light:  #B0A4A4;
+  --text-muted:  #887878;
 
   --font-head: 'Montserrat', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -31,7 +31,7 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.12);
   --shadow:    0 8px 32px rgba(0,0,0,0.2);
   --shadow-lg: 0 24px 64px rgba(0,0,0,0.3);
-  --shadow-gold: 0 8px 32px rgba(201,168,112,0.25);
+  --shadow-gold: 0 8px 32px rgba(227,30,36,0.3);
 
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
