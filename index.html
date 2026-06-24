@@ -23,7 +23,13 @@
   <meta name="twitter:description" content="Melbourne's trusted stone, marble &amp; concrete restoration specialists. 15+ years experience. 4.9★ rated. Call 1300 131 271.">
   <meta name="twitter:image"       content="https://irockfinishes.com.au/images/hero-lobby.png">
 
-  <!-- JSON-LD: LocalBusiness + Services -->
+  <!-- Preload critical assets for LCP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="images/hero-lobby.png" as="image">
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- JSON-LD: LocalBusiness + Reviews + WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,6 +46,7 @@
         "email": "info@irockfinishes.com.au",
         "address": {
           "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
           "addressRegion": "VIC",
           "addressCountry": "AU"
         },
@@ -53,27 +60,86 @@
             {"@type": "City", "name": "Bendigo"}
           ]
         },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "07:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "14:00"
+          }
+        ],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
           "bestRating": "5",
           "ratingCount": "50"
         },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "Sarah A"},
+            "reviewBody": "We were so happy with the work done on our bathroom and laundry tiles. The team worked with care and were super thorough. Isaac was easy to communicate with and solved problems quickly! Would absolutely recommend."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "Alison L"},
+            "reviewBody": "Great work as always. Have used iRock several times and never disappointed. Professional, friendly, trustworthy and do a great job. Highly recommend."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "Darloyn C"},
+            "reviewBody": "We could not be happier. The finished product is like new and the tradesmen were very professional and thorough. When the marble benchtop is the showpiece of your room you want it perfect — and it now is. Can't stop smiling!"
+          },
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "Denice M"},
+            "reviewBody": "iRock polished my stone shower tile then added a few coats of sealer — they now look brand new. Professional and punctual, carefully protecting all surfaces. Job completed same day and ready to use next day. Simply brilliant."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "AMP"},
+            "reviewBody": "I can highly recommend iRock Finishes for quality service and reliable work. Isaac was friendly to deal with in booking, and Jack was great cleaning and polishing my kitchen stone bench, offering tips on ongoing maintenance. Very happy customer."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "D.S"},
+            "reviewBody": "The team did a professional job on my tiles — communicated well throughout, finished work of high quality, and went the extra mile to cover areas I hadn't considered. Very good service and workmanship."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+            "author": {"@type": "Person", "name": "Mckimmcare"},
+            "reviewBody": "We were so happy with the work done on our bathroom and laundry tiles. The team worked with care and were super thorough. Isaac was easy to communicate with and solved problems quickly! Would absolutely recommend."
+          }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Surface Restoration Services",
           "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marble & Stone Restoration"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tile Restoration & Sealing"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Sealing & Cleaning"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Non-Slip Flooring Coating"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stone Repair"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Surface Restoration"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Surface Restoration"}}
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marble & Stone Restoration", "areaServed": "Melbourne, VIC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tile Restoration & Sealing", "areaServed": "Melbourne, VIC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Sealing & Cleaning", "areaServed": "Melbourne, VIC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Non-Slip Flooring Coating", "areaServed": "Melbourne, VIC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stone Repair", "areaServed": "Melbourne, VIC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Surface Restoration", "areaServed": "Melbourne, VIC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Surface Restoration", "areaServed": "Melbourne, VIC"}}
           ]
         },
         "sameAs": [
-          "https://www.instagram.com/irockfinishes"
+          "https://www.instagram.com/irockfinishes",
+          "https://www.facebook.com/irockfinishes"
         ]
       },
       {
@@ -81,7 +147,12 @@
         "@id": "https://irockfinishes.com.au/#website",
         "url": "https://irockfinishes.com.au",
         "name": "iRock Finishes",
-        "publisher": {"@id": "https://irockfinishes.com.au/#business"}
+        "publisher": {"@id": "https://irockfinishes.com.au/#business"},
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://irockfinishes.com.au/services.html",
+          "query-input": "required name=search_term_string"
+        }
       }
     ]
   }

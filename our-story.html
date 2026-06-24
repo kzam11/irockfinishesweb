@@ -23,20 +23,43 @@
   <meta name="twitter:description" content="Meet the iRock Finishes team — Melbourne stone and marble restoration experts with 15+ years experience and a 4.9★ Google rating.">
   <meta name="twitter:image"       content="https://irockfinishes.com.au/images/team-stairs.jpg">
 
-  <!-- JSON-LD: AboutPage -->
+  <!-- JSON-LD: AboutPage + Founder -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://irockfinishes.com.au/our-story.html",
-    "url": "https://irockfinishes.com.au/our-story.html",
-    "name": "About iRock Finishes",
-    "description": "The story, values and team behind iRock Finishes — Victoria's stone, marble and concrete restoration specialists.",
-    "isPartOf": {"@id": "https://irockfinishes.com.au/#website"},
-    "about": {"@id": "https://irockfinishes.com.au/#business"}
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://irockfinishes.com.au/our-story.html",
+        "url": "https://irockfinishes.com.au/our-story.html",
+        "name": "About iRock Finishes",
+        "description": "The story, values and team behind iRock Finishes — Victoria's stone, marble and concrete restoration specialists.",
+        "isPartOf": {"@id": "https://irockfinishes.com.au/#website"},
+        "about": {"@id": "https://irockfinishes.com.au/#business"},
+        "mentions": {"@id": "https://irockfinishes.com.au/#founder"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://irockfinishes.com.au/#founder",
+        "name": "Isaac",
+        "jobTitle": "Director & Founder",
+        "worksFor": {"@id": "https://irockfinishes.com.au/#business"},
+        "knowsAbout": [
+          "Marble restoration",
+          "Stone polishing",
+          "Tile sealing",
+          "Concrete resurfacing",
+          "Non-slip floor coatings"
+        ],
+        "description": "Isaac founded iRock Finishes with a focus on bringing industrial-grade stone restoration expertise to residential and commercial properties across Victoria. With over 15 years in the industry, he personally oversees every project and remains the primary contact for all client enquiries."
+      }
+    ]
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -233,6 +256,40 @@
         <div class="value-card" role="listitem" data-animate>
           <h4>Education</h4>
           <p>We help clients understand how to maintain their surfaces, providing floor care tips and technical support so your investment stays beautiful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER BIO -->
+  <section class="section" aria-labelledby="founder-heading">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem;align-items:center;">
+        <div data-animate style="animation-delay:0.15s;">
+          <div style="background:var(--dark);border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;">
+            <img src="images/team-stairs.jpg" alt="Isaac, founder of iRock Finishes, on a commercial stone restoration project in Melbourne" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+        </div>
+        <div data-animate>
+          <p class="eyebrow">Meet the Founder</p>
+          <h2 id="founder-heading">Isaac — Director &amp; Lead Specialist</h2>
+          <div class="divider"></div>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem;">
+            I started iRock Finishes because I saw a gap in the market — too many stone restoration companies treating every surface the same way, with the same products, and wondering why results were inconsistent. Stone isn't uniform. Marble from Italy behaves differently to travertine from Turkey. Porcelain needs a different sealer to natural limestone. Getting it right requires knowledge, not just equipment.
+          </p>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem;">
+            Over 15 years working across residential homes, 5-star hotels, major infrastructure projects and Melbourne CBD landmarks, I've built a process that accounts for those differences. Every job starts with a proper surface assessment. We identify the stone type, the finish, the damage, and the right treatment sequence before we touch anything.
+          </p>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem;">
+            I'm personally involved in every project — available by phone throughout, and on-site for anything complex. The 4.9-star rating we hold reflects a simple commitment: I won't hand over a job I'm not proud of.
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Talk to Isaac Directly</a>
+            <a href="tel:1300131271" class="btn btn-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.5v1.42z"/></svg>
+              1300 131 271
+            </a>
+          </div>
         </div>
       </div>
     </div>
