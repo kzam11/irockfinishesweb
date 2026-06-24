@@ -3,14 +3,14 @@
 
   <url>
     <loc>https://irockfinishes.com.au/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://irockfinishes.com.au/services.html</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -22,6 +22,65 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Individual service pages -->
+  <url>
+    <loc>https://irockfinishes.com.au/marble-restoration-melbourne.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://irockfinishes.com.au/tile-sealing-melbourne.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://irockfinishes.com.au/concrete-sealing-melbourne.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://irockfinishes.com.au/stone-repair-melbourne.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Suburb location pages -->
+  <url>
+    <loc>https://irockfinishes.com.au/marble-restoration-toorak.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://irockfinishes.com.au/marble-restoration-south-yarra.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://irockfinishes.com.au/stone-restoration-melbourne-cbd.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://irockfinishes.com.au/tile-sealing-richmond.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Core pages -->
   <url>
     <loc>https://irockfinishes.com.au/our-story.html</loc>
     <lastmod>2026-06-22</lastmod>
